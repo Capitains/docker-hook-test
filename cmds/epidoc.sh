@@ -1,4 +1,4 @@
 #!/bin/sh
-hooktest --scheme epidoc --json /sources/$1/result.json -w 5 -c /sources/$1
+hooktest --scheme epidoc --json /sources/$1/result.json -w 5 -c /sources/$1 --verbose
 echo "data = "|cat - /sources/$1/result.json > /tmp/out && mv /tmp/out /sources/$1/result.json
 cp /cmds/results.html /sources/$1/results.html
