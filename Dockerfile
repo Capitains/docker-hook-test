@@ -12,7 +12,7 @@ RUN apk add --no-cache python3 python3-dev gcc linux-headers libxml2 libxml2-dev
 ENV LANG C.UTF-8
 
 RUN pip3 install pbr
-RUN pip3 install HookTest
+RUN pip3 install HookTest==0.1.0
 
 ADD ./cmds /cmds
 WORKDIR /cmds
