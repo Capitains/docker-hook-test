@@ -12,7 +12,7 @@ RUN apk add --no-cache python3 python3-dev gcc linux-headers libxml2 libxml2-dev
 ENV LANG C.UTF-8
 
 RUN pip3 install pbr
-RUN pip3 install HookTest==0.1.0
+RUN pip3 install HookTest>=1.2.2
 
 ADD ./cmds /cmds
 WORKDIR /cmds
@@ -21,4 +21,4 @@ VOLUME /sources
 RUN chmod +x tei.sh && chmod +x epidoc.sh
 
 # start supervisor to run our wsgi server
-CMD ["bash"]
+CMD ["/bin/sh"]
